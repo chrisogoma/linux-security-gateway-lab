@@ -1,0 +1,89 @@
+# Required Tasks
+
+The following tasks were completed as part of the Linux Security Gateway Lab implementation.
+
+## 1. Lab Design
+
+- Draw the network architecture.
+- Identify all network interfaces.
+- Assign IP addresses.
+- Explain the purpose of each Virtual Machine (VM).
+
+---
+
+## 2. Linux Gateway Setup
+
+- Install and configure the Gateway Virtual Machine.
+- Enable IPv4 forwarding.
+- Confirm that both Gateway network interfaces are operational.
+
+---
+
+## 3. Basic Connectivity
+
+- Configure the Client and Server Virtual Machines so that traffic is routed through the Gateway.
+- Demonstrate successful connectivity before applying the final security policy.
+
+---
+
+## 4. Stateful nftables Policy
+
+- Create a persistent **nftables** configuration.
+- Implement a **default-deny** security policy.
+- Permit only **Established** and **Related** connections.
+
+---
+
+## 5. Approved Access
+
+- Permit the Client Network to access the Server using **HTTP (Port 80)** or **HTTPS (Port 443)**.
+- Permit **SSH (Port 22)** only from a clearly defined administrative source.
+
+---
+
+## 6. Restricted Access
+
+- Block at least one specified traffic type.
+- Enable logging for denied traffic.
+- Demonstrate that unauthorized traffic is successfully denied.
+
+---
+
+## 7. Logging and Counters
+
+- Enable useful **nftables** logging.
+- Configure rule counters.
+- Demonstrate that permitted and denied traffic matches the expected firewall rules.
+
+---
+
+## 8. Service Validation
+
+- Deploy a simple web service on the Server Virtual Machine.
+- Validate that approved traffic reaches the service.
+- Demonstrate that blocked traffic cannot access the service.
+
+---
+
+## 9. Packet Analysis
+
+- Capture at least one **allowed** network connection.
+- Capture at least one **blocked** network connection.
+- Analyze the captured packets using **tcpdump** or **Wireshark**.
+- Explain the observed network behavior.
+
+---
+
+## 10. Persistence
+
+- Demonstrate that the **nftables** firewall configuration remains active after the Gateway Virtual Machine is rebooted.
+
+---
+
+## 11. Troubleshooting Exercise
+
+- Introduce one configuration fault deliberately.
+- Record the symptoms observed.
+- Investigate the issue using a systematic troubleshooting process.
+- Correct the fault.
+- Document the root cause and resolution.
